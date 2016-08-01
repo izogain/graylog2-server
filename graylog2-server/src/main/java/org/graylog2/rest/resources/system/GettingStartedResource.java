@@ -70,8 +70,8 @@ public class GettingStartedResource extends RestResource {
 
     private static String currentMinorVersionString() {
         return String.format("%d.%d",
-                             Version.CURRENT_CLASSPATH.major,
-                             Version.CURRENT_CLASSPATH.minor);
+                             Version.CURRENT_CLASSPATH.getVersion().getMajorVersion(),
+                             Version.CURRENT_CLASSPATH.getVersion().getMinorVersion());
     }
 
 }
